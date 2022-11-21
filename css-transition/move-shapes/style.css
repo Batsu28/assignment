@@ -21,13 +21,13 @@
   border-radius: 50%;
 }
 .shape-1 {
-  background-color: red;
+  background-color: blue;
 }
 .shape-2 {
   background-color: green;
 }
 .shape-3 {
-  background-color: blue;
+  background-color: red;
 }
 .outer-box:hover .shape-1 {
   transform: translate(-300px, -300px);
@@ -36,4 +36,10 @@
 .outer-box:hover .shape-2 {
   transform: translate(0, 300px);
   transition: all 2s 0.5s;
+}
+.outer-box:hover .shape-3 {
+  transform: translate(300px, -300px);
+  border-radius: 0;
+  background-color: orange;
+  transition: transform 2s 0.5s, border-radius 1s 2.5s, background-color 1s 2.5s;
 }
