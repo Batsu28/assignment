@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+.container {
+  position: relative;
+  margin: 100px auto;
+  width: 600px;
+  height: 600px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.inner-box {
+  width: 240px;
+  height: 240px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  margin: 10px;
+  width: 98px;
+  height: 98px;
+  box-shadow: rgba(128, 128, 128, 0.3) 5px 5px 20px,
+    rgba(128, 128, 128, 0.3) -5px -5px 20px;
+}
+.flying-box {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  opacity: 0.3;
+  transition: top 1s 0.5s, left 1s 0.5s, bottom 1s 0.5s, right 1s 0.5s,
+    opacity 1s 1s;
+}
+.f-box-1 {
+  top: 190px;
+  left: 190px;
+}
+.f-box-2 {
+  top: 190px;
+  right: 190px;
+}
+.f-box-3 {
+  bottom: 190px;
+  left: 190px;
+}
+.f-box-4 {
+  bottom: 190px;
+  right: 190px;
+}
+.container:hover .flying-box {
+  opacity: 0.5;
+}
+.container:hover .f-box-1 {
+  top: 0px;
+  left: 0px;
+}
+.container:hover .f-box-2 {
+  top: 0px;
+  right: 0px;
+}
+.container:hover .f-box-3 {
+  bottom: 0px;
+  left: 0px;
+}
+.container:hover .f-box-4 {
+  bottom: 0px;
+  right: 0px;
+}
