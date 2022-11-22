@@ -24,29 +24,30 @@
   background-color: blue;
   top: 300px;
   left: 300px;
-  transition: all 2s .5s;
+  transition: all 2s 0.5s;
 }
 .shape-2 {
   background-color: green;
   top: 300px;
   left: 300px;
-  transition: top 1s .8s, left 1s 1.5s;
+  transition: top 1s 0.8s, left 1s 1.5s;
 }
 .shape-3 {
   background-color: red;
   top: 300px;
   left: 300px;
-  transition: top 1.2s .9s, left 1.5s 1s, border-radius .5s 1.8s, background-color .5s 1.8s;
+  transition: top 1.2s 0.9s, left 1.2s 1s, border-radius 0.5s 1.8s,
+    background-color 0.5s 1.8s;
 }
-.outer-box:hover .shape-1{
+.outer-box:hover .shape-1 {
   left: 0px;
   top: 0px;
 }
-.outer-box:hover .shape-2{
+.outer-box:hover .shape-2 {
   top: 600px;
   left: 600px;
 }
-.outer-box:hover .shape-3{
+.outer-box:hover .shape-3 {
   left: 600px;
   top: 0;
   border-radius: 0;
