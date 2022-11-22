@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+.container {
+  margin: 100px auto;
+  width: 300px;
+  height: 60px;
+  position: relative;
+  cursor: pointer;
+}
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 300px;
+  height: 60px;
+  background-color: gray;
+  color: white;
+  border: 1px solid black;
+  transition: background-color 2s;
+}
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+  border: 1px solid black;
+  transition: top 1s 0.1s, right 1s 0s, display 2s 1s;
+}
+.container:hover .box {
+  background-color: red;
+  z-index: 2;
+}
+.container:hover .circle {
+  top: 5px;
+  right: 100px;
+}
