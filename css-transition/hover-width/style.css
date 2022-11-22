@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+.container {
+  max-width: 960px;
+  width: 100%;
+  margin: auto;
+}
+.section {
+  height: 200px;
+}
+.shape {
+  width: 100px;
+  height: 100px;
+}
+.shape-blue {
+  background-color: blue;
+  transition: width 2s 0s;
+}
+.shape-green {
+  background-color: green;
+  transition: width 2s 0s;
+}
+.shape-blue:active {
+  width: 500px;
+}
+.shape-green:hover {
+  width: 500px;
+}
