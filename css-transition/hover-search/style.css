@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+.container {
+  margin: auto;
+  width: 300px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: antiquewhite;
+}
+input {
+  padding: 20px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  border: 2px solid rgb(210, 183, 148);
+  transition: all 1s 0.2s;
+}
+input:focus {
+  width: 200px;
+  box-shadow: rgb(210, 183, 148) 3px 3px 10px, rgb(210, 183, 148) -3px -3px 10px;
+}
