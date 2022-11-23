@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+}
+.container {
+  margin: auto;
+  padding: 50px;
+  width: 700px;
+  height: 700px;
+  background-color: rgb(55, 215, 148);
+}
+.pic-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+img {
+  width: 100%;
+  filter: grayscale(100%);
+  transition: all 1s 0.2s;
+}
+.images {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+}
+.scale {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 200px;
+  height: 200px;
+  background-color: gray;
+  opacity: 0;
+  transition: all 1s 0.1s;
+}
+.images:hover img {
+  filter: none;
+}
+.images:hover .scale {
+  opacity: 0.2;
+}
+.images:hover .s1 {
+  transform: translate(-200px, -200px);
+}
+.images:hover .s2 {
+  transform: translate(0, -200px);
+}
+.images:hover .s3 {
+  transform: translate(200px, -200px);
+}
+.images:hover .s4 {
+  transform: translate(-200px);
+}
+.images:hover .s5 {
+  display: none;
+}
+.images:hover .s6 {
+  transform: translate(200px);
+}
+.images:hover .s7 {
+  transform: translate(-200px, 200px);
+}
+.images:hover .s8 {
+  transform: translate(0, 200px);
+}
+.images:hover .s9 {
+  transform: translate(200px, 200px);
+}
