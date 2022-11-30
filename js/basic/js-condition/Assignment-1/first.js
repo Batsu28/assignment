@@ -26,7 +26,19 @@ let ten = !(4 === "4"); //true
 
 // 3
 
+let myage = 23,
+  yourage = prompt("Насаа оруулна уу:");
+
+if (myage < yourage) {
+  alert("you are older");
+} else if (myage == yourage) {
+  alert("we are same age");
+} else {
+  alert("i am older");
+}
+
 // 4
+
 let day = 10;
 
 if (day >= 1 && day <= 5) {
@@ -34,5 +46,13 @@ if (day >= 1 && day <= 5) {
 } else if (day == 6 || day == 7) {
   console.log("Амралтын өдөр");
 } else {
-  console.log("day you enter is no valid");
+  console.log("day you enter is not found");
 }
+
+// 5
+
+let workTime = prompt("enter your work time"),
+  ratePerHour = 28,
+  yourSalary = workTime * ratePerHour;
+
+alert("Your Salary is: " + yourSalary + "$");
