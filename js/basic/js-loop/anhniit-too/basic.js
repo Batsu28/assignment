@@ -1,11 +1,11 @@
-let n = 7;
+let n = 49;
 
 if (n < 100) {
   if ((n % 2 == 0 && n > 3) || (n % 3 == 0 && n > 3) || (n % 5 == 0 && n > 5)) {
-    console.log("bish");
+    console.log(n + " is not prime number");
   } else {
-    console.log("mun");
+    console.log(n + " is prime number");
   }
 } else {
-  console.log("wrong number");
+  console.log("please enter number lower than 100");
 }
