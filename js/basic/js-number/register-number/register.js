@@ -1,16 +1,14 @@
 let register = prompt("please enter your register number");
-let register1 = register.toLowerCase();
+let upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let lower = "abcdefghijklmnopqrstuvwxyz";
 
-if (register1.length == 10) {
-  if (register1.substring(0, 2).match([a - z])) {
-    if (register1.substring(2, 9) === isNaN) {
-      alert("you are mongol");
-    } else {
-      alert("you are not mongol");
-    }
-  } else {
-    alert("please enter in correct formation2");
-  }
+if (
+  register.length == 10 &&
+  (upper.includes(register.substring(0, 2)) ||
+    lower.includes(register.substring(0, 2))) &&
+  !isNaN(register.substring(2, 9))
+) {
+  alert("you are mongol");
 } else {
   alert("please enter in correct formation1");
 }
