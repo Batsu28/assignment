@@ -74,12 +74,59 @@ const users = [
   },
 ];
 
-let sum = [];
-
-for (let n = 0; n < users.length; n++) {
-  sum += users[n].skills.length;
+function search(input) {
+  for (let n = 0; n < input.length; n++) {
+    if (input[n].name === searchUser) {
+      return input[n];
+    }
+  }
 }
-let arr = sum.split("");
-let arrSort = arr.sort();
-let mostSkills = arr.sort()[arr.sort().length - 1];
-console.log(mostSkills);
+
+function mostSkill(input) {
+  for (let n = 0; n < input.length; n++) {
+    let i = 0;
+    if (input[n].skills.length > input[i].skills.length) {
+      return "Name:\t " + input[n].name + "\n" + "Skills:\t " + input[n].skills;
+    } else {
+      i++;
+    }
+  }
+}
+
+function highPoints(input) {
+  let count = 0;
+  let count2 = 0;
+  let output = "";
+  for (let n = 0; n < input.length; n++) {
+    if (input[n].isLoggedIn) {
+      count++;
+    }
+    if (input[n].points >= 50) {
+      count2++;
+    }
+  }
+  output =
+    "there are " +
+    count +
+    " isLoggedIn users" +
+    "\n" +
+    count2 +
+    " user has 50 point";
+  return output;
+}
+
+function selectedSkill(input) {
+  let request = ["MongoDB", "Express", "React", "Node"];
+  let output = "";
+  for (let n = 0; n < input.length; n++) {
+    for (let i = 0; i < input[n].skills.length; i++) {
+      if (request.includes(input[n].skills[i])) {
+        output += input[n];
+      }
+    }
+    output += "\n";
+  }
+  return output;
+}
+
+console.table(selectedSkill(users));
